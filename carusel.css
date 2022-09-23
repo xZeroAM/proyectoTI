@@ -1,0 +1,36 @@
+.carousel {
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.img1 {
+    background: url(images/logobanner.png);
+}
+
+.img2 {
+    background: url(images/carusel2.jpg);
+}
+
+.img3 {
+    background: url(images/carusel3.webp);
+}
+
+.img1, .img2, .img3 {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+}
+
+@media (max-width: 942px){
+    .img1, .img2, .img3 {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+}

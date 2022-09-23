@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    z-index: 10;
+    position: sticky;
+    top: 0;
+    background: url(/images/background.svg);
+    background-size: cover;
+
+    line-height: 80px;
+    height: 80px;
+}
+
+body {
+    background: url(images/background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    position: relative;
+}
+
+.nav {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.navegador-1 {
+    width: 100%;
+}
+
+.navegador-2 {
+    position: fixed;
+    display: flex;
+    z-index: 10;
+    width: 100%;
+    overflow-y: auto;
+    transition: left 0.3s;
+    justify-content: center;
+}
+
+.responsive {
+    width: 50%;
+}
+
+.nav-menu {
+    padding: 0%;
+    display: flex;
+    margin-bottom: 0;
+}
+
+.nav-menu li {
+    list-style: none;
+    margin: 0 1.3rem;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-title {
+    font-size: 29px;
+    margin: 23px 1.3rem;
+}
+
+.nav-title a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-title a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+/* En esta parte cambio el stylo de buttom */
+
+.nave-toggle {
+    color: black;
+    background: none;
+    border: none;
+    font-size: 25px;
+    line-height: 80px;
+    padding: 0 20px;
+    color: white;
+    height: 60px;
+}
+
+.cont-menu {
+    display: flex;
+}
+
+.oculto {
+    display: none;
+    line-height: 80px;
+}
+
+/* Animación del nav menu */
+
+.nav-menu li a::before {
+    content: "";
+    width: 0%;
+    height: 3px;
+    right: 50%;
+    position: absolute;
+    background-color: #FF00F0; 
+    bottom: 25px;
+    transition: 0.3s ease-out;
+}
+
+.nav-menu li a:hover::before{
+    width: 100%;
+    right: 0%;
+}
+
+@media (max-width: 942px) {
+    
+    .oculto {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navegador-2 .nav-title {
+        display: none;
+    }
+
+    .navegador-2 {
+        flex-direction: column;
+        top: 80px;
+        left: 100%;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-menu li {
+        margin: 30px auto;
+    }
+
+    .navegador-2 {
+        display: flex;
+        z-index: 10;
+        background: url(/images/background.svg);
+        background-repeat: no-repeat;
+        background-size: 1920px;
+        background-position: center;
+        width: 100%;
+        left: 100%;
+        box-shadow: 0px 10px 7px -10px #0066ff;
+    }
+
+    .nav-menu_visible {
+        top: 80px;
+        left: 0;
+    }
+
+    .nav-menu li a::before {
+        bottom: 22px;
+    }
+
+}
